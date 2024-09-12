@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "*.ejs": "html",
+        "stdlib.h": "c",
+        "file_io.h": "c",
+        "logging.h": "c",
+        "*.tcc": "c",
+        "enc_dec.h": "c",
+        "bitset": "c"
+    }
+}
