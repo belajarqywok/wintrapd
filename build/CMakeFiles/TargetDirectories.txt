@@ -1,0 +1,3 @@
+F:/projects/hacking projects/wintrapd/build/CMakeFiles/trojan.dir
+F:/projects/hacking projects/wintrapd/build/CMakeFiles/edit_cache.dir
+F:/projects/hacking projects/wintrapd/build/CMakeFiles/rebuild_cache.dir
