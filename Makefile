@@ -11,3 +11,6 @@ move:
 cmake-build: 
 	cmake -S . -B build -G "MinGW Makefiles" -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
 	cmake --build build
+
+msfrun:
+	msfconsole -r msfcrun.rc
