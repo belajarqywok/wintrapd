@@ -116,19 +116,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named win32update
-
-# Build rule for target.
-win32update: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 win32update
-.PHONY : win32update
-
-# fast build rule for target.
-win32update/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\win32update.dir\build.make CMakeFiles/win32update.dir/build
-.PHONY : win32update/fast
-
-#=============================================================================
 # Target rules for targets named b64tool
 
 # Build rule for target.
@@ -140,6 +127,19 @@ b64tool: cmake_check_build_system
 b64tool/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\b64tool.dir\build.make CMakeFiles/b64tool.dir/build
 .PHONY : b64tool/fast
+
+#=============================================================================
+# Target rules for targets named win32update
+
+# Build rule for target.
+win32update: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 win32update
+.PHONY : win32update
+
+# fast build rule for target.
+win32update/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\win32update.dir\build.make CMakeFiles/win32update.dir/build
+.PHONY : win32update/fast
 
 #=============================================================================
 # Target rules for targets named chrome_update
@@ -167,6 +167,19 @@ msvcmon/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\msvcmon.dir\build.make CMakeFiles/msvcmon.dir/build
 .PHONY : msvcmon/fast
 
+#=============================================================================
+# Target rules for targets named msvcsvc
+
+# Build rule for target.
+msvcsvc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 msvcsvc
+.PHONY : msvcsvc
+
+# fast build rule for target.
+msvcsvc/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\msvcsvc.dir\build.make CMakeFiles/msvcsvc.dir/build
+.PHONY : msvcsvc/fast
+
 b64tool.obj: b64tool.c.obj
 .PHONY : b64tool.obj
 
@@ -191,13 +204,21 @@ b64tool.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\b64tool.dir\build.make CMakeFiles/b64tool.dir/b64tool.c.s
 .PHONY : b64tool.c.s
 
-chrome_update.obj: chrome_update.rc.obj
-.PHONY : chrome_update.obj
+b64tool.obj: b64tool.rc.obj
+.PHONY : b64tool.obj
 
 # target to build an object file
-chrome_update.rc.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\chrome_update.dir\build.make CMakeFiles/chrome_update.dir/chrome_update.rc.obj
-.PHONY : chrome_update.rc.obj
+b64tool.rc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\b64tool.dir\build.make CMakeFiles/b64tool.dir/b64tool.rc.obj
+.PHONY : b64tool.rc.obj
+
+chrome.obj: chrome.rc.obj
+.PHONY : chrome.obj
+
+# target to build an object file
+chrome.rc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\chrome_update.dir\build.make CMakeFiles/chrome_update.dir/chrome.rc.obj
+.PHONY : chrome.rc.obj
 
 kylg_winapi.obj: kylg_winapi.c.obj
 .PHONY : kylg_winapi.obj
@@ -247,6 +268,40 @@ malwr_rc4.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\win32update.dir\build.make CMakeFiles/win32update.dir/malwr_rc4.c.s
 .PHONY : malwr_rc4.c.s
 
+msvc.obj: msvc.rc.obj
+.PHONY : msvc.obj
+
+# target to build an object file
+msvc.rc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\win32update.dir\build.make CMakeFiles/win32update.dir/msvc.rc.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\msvcmon.dir\build.make CMakeFiles/msvcmon.dir/msvc.rc.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\msvcsvc.dir\build.make CMakeFiles/msvcsvc.dir/msvc.rc.obj
+.PHONY : msvc.rc.obj
+
+msvcsvc.obj: msvcsvc.c.obj
+.PHONY : msvcsvc.obj
+
+# target to build an object file
+msvcsvc.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\msvcsvc.dir\build.make CMakeFiles/msvcsvc.dir/msvcsvc.c.obj
+.PHONY : msvcsvc.c.obj
+
+msvcsvc.i: msvcsvc.c.i
+.PHONY : msvcsvc.i
+
+# target to preprocess a source file
+msvcsvc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\msvcsvc.dir\build.make CMakeFiles/msvcsvc.dir/msvcsvc.c.i
+.PHONY : msvcsvc.c.i
+
+msvcsvc.s: msvcsvc.c.s
+.PHONY : msvcsvc.s
+
+# target to generate assembly for a file
+msvcsvc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\msvcsvc.dir\build.make CMakeFiles/msvcsvc.dir/msvcsvc.c.s
+.PHONY : msvcsvc.c.s
+
 trojan.obj: trojan.c.obj
 .PHONY : trojan.obj
 
@@ -282,17 +337,23 @@ help:
 	@echo ... b64tool
 	@echo ... chrome_update
 	@echo ... msvcmon
+	@echo ... msvcsvc
 	@echo ... win32update
 	@echo ... b64tool.obj
 	@echo ... b64tool.i
 	@echo ... b64tool.s
-	@echo ... chrome_update.obj
+	@echo ... b64tool.obj
+	@echo ... chrome.obj
 	@echo ... kylg_winapi.obj
 	@echo ... kylg_winapi.i
 	@echo ... kylg_winapi.s
 	@echo ... malwr_rc4.obj
 	@echo ... malwr_rc4.i
 	@echo ... malwr_rc4.s
+	@echo ... msvc.obj
+	@echo ... msvcsvc.obj
+	@echo ... msvcsvc.i
+	@echo ... msvcsvc.s
 	@echo ... trojan.obj
 	@echo ... trojan.i
 	@echo ... trojan.s

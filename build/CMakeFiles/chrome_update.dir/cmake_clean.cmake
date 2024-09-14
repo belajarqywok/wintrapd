@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/chrome_update.dir/chrome_update.rc.obj"
+  "CMakeFiles/chrome_update.dir/chrome.rc.obj"
   "CMakeFiles/chrome_update.dir/trojan.c.obj"
   "CMakeFiles/chrome_update.dir/trojan.c.obj.d"
   "chrome_update.exe"

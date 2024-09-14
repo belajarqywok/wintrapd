@@ -82,21 +82,21 @@ CMakeFiles/chrome_update.dir/trojan.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/chrome_update.dir/trojan.c.s"
 	F:\msys64\mingw64\bin\clang.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "F:\projects\hacking projects\wintrapd\trojan.c" -o CMakeFiles\chrome_update.dir\trojan.c.s
 
-CMakeFiles/chrome_update.dir/chrome_update.rc.obj: CMakeFiles/chrome_update.dir/flags.make
-CMakeFiles/chrome_update.dir/chrome_update.rc.obj: F:/projects/hacking\ projects/wintrapd/chrome_update.rc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="F:\projects\hacking projects\wintrapd\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building RC object CMakeFiles/chrome_update.dir/chrome_update.rc.obj"
-	F:\msys64\mingw64\bin\windres.exe -O coff $(RC_DEFINES) $(RC_INCLUDES) $(RC_FLAGS) "F:\projects\hacking projects\wintrapd\chrome_update.rc" CMakeFiles\chrome_update.dir\chrome_update.rc.obj
+CMakeFiles/chrome_update.dir/chrome.rc.obj: CMakeFiles/chrome_update.dir/flags.make
+CMakeFiles/chrome_update.dir/chrome.rc.obj: F:/projects/hacking\ projects/wintrapd/chrome.rc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="F:\projects\hacking projects\wintrapd\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building RC object CMakeFiles/chrome_update.dir/chrome.rc.obj"
+	F:\msys64\mingw64\bin\windres.exe -O coff $(RC_DEFINES) $(RC_INCLUDES) $(RC_FLAGS) "F:\projects\hacking projects\wintrapd\chrome.rc" CMakeFiles\chrome_update.dir\chrome.rc.obj
 
 # Object files for target chrome_update
 chrome_update_OBJECTS = \
 "CMakeFiles/chrome_update.dir/trojan.c.obj" \
-"CMakeFiles/chrome_update.dir/chrome_update.rc.obj"
+"CMakeFiles/chrome_update.dir/chrome.rc.obj"
 
 # External object files for target chrome_update
 chrome_update_EXTERNAL_OBJECTS =
 
 chrome_update.exe: CMakeFiles/chrome_update.dir/trojan.c.obj
-chrome_update.exe: CMakeFiles/chrome_update.dir/chrome_update.rc.obj
+chrome_update.exe: CMakeFiles/chrome_update.dir/chrome.rc.obj
 chrome_update.exe: CMakeFiles/chrome_update.dir/build.make
 chrome_update.exe: CMakeFiles/chrome_update.dir/linkLibs.rsp
 chrome_update.exe: CMakeFiles/chrome_update.dir/objects1

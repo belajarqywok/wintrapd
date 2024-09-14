@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_RC
-  "F:/projects/hacking projects/wintrapd/chrome_update.rc" "F:/projects/hacking projects/wintrapd/build/CMakeFiles/chrome_update.dir/chrome_update.rc.obj"
+  "F:/projects/hacking projects/wintrapd/chrome.rc" "F:/projects/hacking projects/wintrapd/build/CMakeFiles/chrome_update.dir/chrome.rc.obj"
   )
 
 # The include file search paths:

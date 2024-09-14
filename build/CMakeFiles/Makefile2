@@ -62,10 +62,11 @@ CMAKE_BINARY_DIR = "F:\projects\hacking projects\wintrapd\build"
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/win32update.dir/all
 all: CMakeFiles/b64tool.dir/all
+all: CMakeFiles/win32update.dir/all
 all: CMakeFiles/chrome_update.dir/all
 all: CMakeFiles/msvcmon.dir/all
+all: CMakeFiles/msvcsvc.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -73,37 +74,12 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/win32update.dir/clean
 clean: CMakeFiles/b64tool.dir/clean
+clean: CMakeFiles/win32update.dir/clean
 clean: CMakeFiles/chrome_update.dir/clean
 clean: CMakeFiles/msvcmon.dir/clean
+clean: CMakeFiles/msvcsvc.dir/clean
 .PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/win32update.dir
-
-# All Build rule for target.
-CMakeFiles/win32update.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\win32update.dir\build.make CMakeFiles/win32update.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\win32update.dir\build.make CMakeFiles/win32update.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="F:\projects\hacking projects\wintrapd\build\CMakeFiles" --progress-num=8,9 "Built target win32update"
-.PHONY : CMakeFiles/win32update.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/win32update.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "F:\projects\hacking projects\wintrapd\build\CMakeFiles" 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/win32update.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "F:\projects\hacking projects\wintrapd\build\CMakeFiles" 0
-.PHONY : CMakeFiles/win32update.dir/rule
-
-# Convenience name for target.
-win32update: CMakeFiles/win32update.dir/rule
-.PHONY : win32update
-
-# clean rule for target.
-CMakeFiles/win32update.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\win32update.dir\build.make CMakeFiles/win32update.dir/clean
-.PHONY : CMakeFiles/win32update.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/b64tool.dir
@@ -112,12 +88,12 @@ CMakeFiles/win32update.dir/clean:
 CMakeFiles/b64tool.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\b64tool.dir\build.make CMakeFiles/b64tool.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\b64tool.dir\build.make CMakeFiles/b64tool.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="F:\projects\hacking projects\wintrapd\build\CMakeFiles" --progress-num=1,2 "Built target b64tool"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="F:\projects\hacking projects\wintrapd\build\CMakeFiles" --progress-num=1,2,3 "Built target b64tool"
 .PHONY : CMakeFiles/b64tool.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/b64tool.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "F:\projects\hacking projects\wintrapd\build\CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "F:\projects\hacking projects\wintrapd\build\CMakeFiles" 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/b64tool.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "F:\projects\hacking projects\wintrapd\build\CMakeFiles" 0
 .PHONY : CMakeFiles/b64tool.dir/rule
@@ -132,13 +108,39 @@ CMakeFiles/b64tool.dir/clean:
 .PHONY : CMakeFiles/b64tool.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/win32update.dir
+
+# All Build rule for target.
+CMakeFiles/win32update.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\win32update.dir\build.make CMakeFiles/win32update.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\win32update.dir\build.make CMakeFiles/win32update.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="F:\projects\hacking projects\wintrapd\build\CMakeFiles" --progress-num=13,14,15 "Built target win32update"
+.PHONY : CMakeFiles/win32update.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/win32update.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "F:\projects\hacking projects\wintrapd\build\CMakeFiles" 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/win32update.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "F:\projects\hacking projects\wintrapd\build\CMakeFiles" 0
+.PHONY : CMakeFiles/win32update.dir/rule
+
+# Convenience name for target.
+win32update: CMakeFiles/win32update.dir/rule
+.PHONY : win32update
+
+# clean rule for target.
+CMakeFiles/win32update.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\win32update.dir\build.make CMakeFiles/win32update.dir/clean
+.PHONY : CMakeFiles/win32update.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/chrome_update.dir
 
 # All Build rule for target.
 CMakeFiles/chrome_update.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\chrome_update.dir\build.make CMakeFiles/chrome_update.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\chrome_update.dir\build.make CMakeFiles/chrome_update.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="F:\projects\hacking projects\wintrapd\build\CMakeFiles" --progress-num=3,4,5 "Built target chrome_update"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="F:\projects\hacking projects\wintrapd\build\CMakeFiles" --progress-num=4,5,6 "Built target chrome_update"
 .PHONY : CMakeFiles/chrome_update.dir/all
 
 # Build rule for subdir invocation for target.
@@ -164,12 +166,12 @@ CMakeFiles/chrome_update.dir/clean:
 CMakeFiles/msvcmon.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\msvcmon.dir\build.make CMakeFiles/msvcmon.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\msvcmon.dir\build.make CMakeFiles/msvcmon.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="F:\projects\hacking projects\wintrapd\build\CMakeFiles" --progress-num=6,7 "Built target msvcmon"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="F:\projects\hacking projects\wintrapd\build\CMakeFiles" --progress-num=7,8,9 "Built target msvcmon"
 .PHONY : CMakeFiles/msvcmon.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/msvcmon.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "F:\projects\hacking projects\wintrapd\build\CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "F:\projects\hacking projects\wintrapd\build\CMakeFiles" 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/msvcmon.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "F:\projects\hacking projects\wintrapd\build\CMakeFiles" 0
 .PHONY : CMakeFiles/msvcmon.dir/rule
@@ -182,6 +184,32 @@ msvcmon: CMakeFiles/msvcmon.dir/rule
 CMakeFiles/msvcmon.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\msvcmon.dir\build.make CMakeFiles/msvcmon.dir/clean
 .PHONY : CMakeFiles/msvcmon.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/msvcsvc.dir
+
+# All Build rule for target.
+CMakeFiles/msvcsvc.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\msvcsvc.dir\build.make CMakeFiles/msvcsvc.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\msvcsvc.dir\build.make CMakeFiles/msvcsvc.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="F:\projects\hacking projects\wintrapd\build\CMakeFiles" --progress-num=10,11,12 "Built target msvcsvc"
+.PHONY : CMakeFiles/msvcsvc.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/msvcsvc.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "F:\projects\hacking projects\wintrapd\build\CMakeFiles" 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/msvcsvc.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "F:\projects\hacking projects\wintrapd\build\CMakeFiles" 0
+.PHONY : CMakeFiles/msvcsvc.dir/rule
+
+# Convenience name for target.
+msvcsvc: CMakeFiles/msvcsvc.dir/rule
+.PHONY : msvcsvc
+
+# clean rule for target.
+CMakeFiles/msvcsvc.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\msvcsvc.dir\build.make CMakeFiles/msvcsvc.dir/clean
+.PHONY : CMakeFiles/msvcsvc.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

