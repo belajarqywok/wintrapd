@@ -175,12 +175,13 @@ int main(int argc, char* argv[]) {
         !strcmp(argv[1], "--help")
     );
 
-    if ((boolean) help) printf("example: kylg_winapi [-o | --out-log] [logname]\n");
-
     const boolean out_log = (  
         !strcmp(argv[1], "-o") ||
         !strcmp(argv[1], "--out-log")
     );
+
+    if ((boolean) help || (boolean) !out_log) printf(
+        "example: kylg_winapi [-o | --out-log] [LOG FILE]\n");
 
     const char* log_file;
     if ((boolean) out_log) log_file = argv[2];

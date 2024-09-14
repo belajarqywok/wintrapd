@@ -6,6 +6,9 @@
         "logging.h": "c",
         "*.tcc": "c",
         "enc_dec.h": "c",
-        "bitset": "c"
+        "bitset": "c",
+        "array": "c",
+        "string": "c",
+        "string_view": "c"
     }
 }

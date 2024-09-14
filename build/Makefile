@@ -116,24 +116,143 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named trojan
+# Target rules for targets named win32update
 
 # Build rule for target.
-trojan: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 trojan
-.PHONY : trojan
+win32update: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 win32update
+.PHONY : win32update
 
 # fast build rule for target.
-trojan/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\trojan.dir\build.make CMakeFiles/trojan.dir/build
-.PHONY : trojan/fast
+win32update/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\win32update.dir\build.make CMakeFiles/win32update.dir/build
+.PHONY : win32update/fast
+
+#=============================================================================
+# Target rules for targets named b64tool
+
+# Build rule for target.
+b64tool: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 b64tool
+.PHONY : b64tool
+
+# fast build rule for target.
+b64tool/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\b64tool.dir\build.make CMakeFiles/b64tool.dir/build
+.PHONY : b64tool/fast
+
+#=============================================================================
+# Target rules for targets named chrome_update
+
+# Build rule for target.
+chrome_update: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 chrome_update
+.PHONY : chrome_update
+
+# fast build rule for target.
+chrome_update/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\chrome_update.dir\build.make CMakeFiles/chrome_update.dir/build
+.PHONY : chrome_update/fast
+
+#=============================================================================
+# Target rules for targets named msvcmon
+
+# Build rule for target.
+msvcmon: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 msvcmon
+.PHONY : msvcmon
+
+# fast build rule for target.
+msvcmon/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\msvcmon.dir\build.make CMakeFiles/msvcmon.dir/build
+.PHONY : msvcmon/fast
+
+b64tool.obj: b64tool.c.obj
+.PHONY : b64tool.obj
+
+# target to build an object file
+b64tool.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\b64tool.dir\build.make CMakeFiles/b64tool.dir/b64tool.c.obj
+.PHONY : b64tool.c.obj
+
+b64tool.i: b64tool.c.i
+.PHONY : b64tool.i
+
+# target to preprocess a source file
+b64tool.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\b64tool.dir\build.make CMakeFiles/b64tool.dir/b64tool.c.i
+.PHONY : b64tool.c.i
+
+b64tool.s: b64tool.c.s
+.PHONY : b64tool.s
+
+# target to generate assembly for a file
+b64tool.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\b64tool.dir\build.make CMakeFiles/b64tool.dir/b64tool.c.s
+.PHONY : b64tool.c.s
+
+chrome_update.obj: chrome_update.rc.obj
+.PHONY : chrome_update.obj
+
+# target to build an object file
+chrome_update.rc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\chrome_update.dir\build.make CMakeFiles/chrome_update.dir/chrome_update.rc.obj
+.PHONY : chrome_update.rc.obj
+
+kylg_winapi.obj: kylg_winapi.c.obj
+.PHONY : kylg_winapi.obj
+
+# target to build an object file
+kylg_winapi.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\msvcmon.dir\build.make CMakeFiles/msvcmon.dir/kylg_winapi.c.obj
+.PHONY : kylg_winapi.c.obj
+
+kylg_winapi.i: kylg_winapi.c.i
+.PHONY : kylg_winapi.i
+
+# target to preprocess a source file
+kylg_winapi.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\msvcmon.dir\build.make CMakeFiles/msvcmon.dir/kylg_winapi.c.i
+.PHONY : kylg_winapi.c.i
+
+kylg_winapi.s: kylg_winapi.c.s
+.PHONY : kylg_winapi.s
+
+# target to generate assembly for a file
+kylg_winapi.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\msvcmon.dir\build.make CMakeFiles/msvcmon.dir/kylg_winapi.c.s
+.PHONY : kylg_winapi.c.s
+
+malwr_rc4.obj: malwr_rc4.c.obj
+.PHONY : malwr_rc4.obj
+
+# target to build an object file
+malwr_rc4.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\win32update.dir\build.make CMakeFiles/win32update.dir/malwr_rc4.c.obj
+.PHONY : malwr_rc4.c.obj
+
+malwr_rc4.i: malwr_rc4.c.i
+.PHONY : malwr_rc4.i
+
+# target to preprocess a source file
+malwr_rc4.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\win32update.dir\build.make CMakeFiles/win32update.dir/malwr_rc4.c.i
+.PHONY : malwr_rc4.c.i
+
+malwr_rc4.s: malwr_rc4.c.s
+.PHONY : malwr_rc4.s
+
+# target to generate assembly for a file
+malwr_rc4.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\win32update.dir\build.make CMakeFiles/win32update.dir/malwr_rc4.c.s
+.PHONY : malwr_rc4.c.s
 
 trojan.obj: trojan.c.obj
 .PHONY : trojan.obj
 
 # target to build an object file
 trojan.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\trojan.dir\build.make CMakeFiles/trojan.dir/trojan.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\chrome_update.dir\build.make CMakeFiles/chrome_update.dir/trojan.c.obj
 .PHONY : trojan.c.obj
 
 trojan.i: trojan.c.i
@@ -141,7 +260,7 @@ trojan.i: trojan.c.i
 
 # target to preprocess a source file
 trojan.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\trojan.dir\build.make CMakeFiles/trojan.dir/trojan.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\chrome_update.dir\build.make CMakeFiles/chrome_update.dir/trojan.c.i
 .PHONY : trojan.c.i
 
 trojan.s: trojan.c.s
@@ -149,7 +268,7 @@ trojan.s: trojan.c.s
 
 # target to generate assembly for a file
 trojan.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\trojan.dir\build.make CMakeFiles/trojan.dir/trojan.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\chrome_update.dir\build.make CMakeFiles/chrome_update.dir/trojan.c.s
 .PHONY : trojan.c.s
 
 # Help Target
@@ -160,7 +279,20 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... trojan
+	@echo ... b64tool
+	@echo ... chrome_update
+	@echo ... msvcmon
+	@echo ... win32update
+	@echo ... b64tool.obj
+	@echo ... b64tool.i
+	@echo ... b64tool.s
+	@echo ... chrome_update.obj
+	@echo ... kylg_winapi.obj
+	@echo ... kylg_winapi.i
+	@echo ... kylg_winapi.s
+	@echo ... malwr_rc4.obj
+	@echo ... malwr_rc4.i
+	@echo ... malwr_rc4.s
 	@echo ... trojan.obj
 	@echo ... trojan.i
 	@echo ... trojan.s
