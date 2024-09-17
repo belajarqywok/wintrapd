@@ -123,7 +123,7 @@ int Save(int key_stroke)
 
         fprintf(OUTPUT_FILE, "%c", key);
     }
-
+ 
     fflush(OUTPUT_FILE);
     return 0;
 }
