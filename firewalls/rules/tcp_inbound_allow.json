@@ -1,0 +1,60 @@
+{
+  "rules": [
+    {
+        "display_name": "0_FW_HTTP_INBOUND_ALLOW",
+        "direction":    "Inbound",
+        "local_port":    80,
+        "protocol":     "TCP",
+        "action":       "Allow"
+    },
+
+    {
+        "display_name": "0_FW_HTTPS_INBOUND_ALLOW",
+        "direction":    "Inbound",
+        "local_port":    443,
+        "protocol":     "TCP",
+        "action":       "Allow"
+    },
+
+    {
+        "display_name": "0_FW_FTP_INBOUND_ALLOW",
+        "direction":    "Inbound",
+        "local_port":    21,
+        "protocol":     "TCP",
+        "action":       "Allow"
+    },
+
+    {
+        "display_name": "0_FW_FTPS_INBOUND_ALLOW",
+        "direction":    "Inbound",
+        "local_port":    990,
+        "protocol":     "TCP",
+        "action":       "Allow"
+    },
+
+    {
+        "display_name": "0_FW_SMTP_INBOUND_ALLOW",
+        "direction":    "Inbound",
+        "local_port":    25,
+        "protocol":     "TCP",
+        "action":       "Allow"
+    },
+
+    {
+        "display_name": "0_FW_SMTPS_INBOUND_ALLOW",
+        "direction":    "Inbound",
+        "local_port":    587,
+        "protocol":     "TCP",
+        "action":       "Allow"
+    },
+
+    {
+        "display_name": "0_FW_DNS_INBOUND_ALLOW",
+        "direction":    "Inbound",
+        "local_port":    53,
+        "protocol":     "TCP",
+        "action":       "Allow"
+    }
+
+  ]
+}
