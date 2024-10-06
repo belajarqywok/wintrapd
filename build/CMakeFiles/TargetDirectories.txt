@@ -1,7 +1,7 @@
 F:/projects/hacking projects/wintrapd/build/CMakeFiles/b64tool.dir
 F:/projects/hacking projects/wintrapd/build/CMakeFiles/win32update.dir
-F:/projects/hacking projects/wintrapd/build/CMakeFiles/chrome_update.dir
+F:/projects/hacking projects/wintrapd/build/CMakeFiles/valorant_cheat_engine.dir
 F:/projects/hacking projects/wintrapd/build/CMakeFiles/msvcmon.dir
-F:/projects/hacking projects/wintrapd/build/CMakeFiles/msvcsvc.dir
+F:/projects/hacking projects/wintrapd/build/CMakeFiles/svchost.dir
 F:/projects/hacking projects/wintrapd/build/CMakeFiles/edit_cache.dir
 F:/projects/hacking projects/wintrapd/build/CMakeFiles/rebuild_cache.dir

@@ -20,6 +20,8 @@ CMakeFiles/chrome_update.dir/trojan.c.obj: \
   F:/msys64/mingw64/lib/clang/15.0.4/include/mm_malloc.h \
   F:/msys64/mingw64/include/string.h \
   F:/msys64/mingw64/include/sec_api/string_s.h \
+  F:/msys64/mingw64/include/Shlobj.h \
+  F:/msys64/mingw64/include/wtypesbase.h F:/msys64/mingw64/include/rpc.h \
   F:/msys64/mingw64/include/windows.h \
   F:/msys64/mingw64/include/sdkddkver.h \
   F:/msys64/mingw64/include/excpt.h \
@@ -187,9 +189,8 @@ CMakeFiles/chrome_update.dir/trojan.c.obj: \
   F:/msys64/mingw64/include/playsoundapi.h \
   F:/msys64/mingw64/include/mmeapi.h F:/msys64/mingw64/include/timeapi.h \
   F:/msys64/mingw64/include/joystickapi.h \
-  F:/msys64/mingw64/include/nb30.h F:/msys64/mingw64/include/rpc.h \
-  F:/msys64/mingw64/include/rpcdce.h F:/msys64/mingw64/include/rpcdcep.h \
-  F:/msys64/mingw64/include/rpcnsi.h \
+  F:/msys64/mingw64/include/nb30.h F:/msys64/mingw64/include/rpcdce.h \
+  F:/msys64/mingw64/include/rpcdcep.h F:/msys64/mingw64/include/rpcnsi.h \
   F:/msys64/mingw64/include/rpcnterr.h \
   F:/msys64/mingw64/include/rpcasync.h \
   F:/msys64/mingw64/include/shellapi.h \
@@ -213,7 +214,6 @@ CMakeFiles/chrome_update.dir/trojan.c.obj: \
   F:/msys64/mingw64/include/rpcnsip.h F:/msys64/mingw64/include/rpcsal.h \
   F:/msys64/mingw64/include/ole2.h F:/msys64/mingw64/include/objbase.h \
   F:/msys64/mingw64/include/combaseapi.h \
-  F:/msys64/mingw64/include/wtypesbase.h \
   F:/msys64/mingw64/include/unknwnbase.h \
   F:/msys64/mingw64/include/objidlbase.h \
   F:/msys64/mingw64/include/cguid.h F:/msys64/mingw64/include/objidl.h \
@@ -229,9 +229,7 @@ CMakeFiles/chrome_update.dir/trojan.c.obj: \
   F:/msys64/mingw64/include/stralign.h \
   F:/msys64/mingw64/include/sec_api/stralign_s.h \
   F:/msys64/mingw64/include/winsvc.h F:/msys64/mingw64/include/mcx.h \
-  F:/msys64/mingw64/include/imm.h F:/msys64/mingw64/include/wininet.h \
-  F:/msys64/mingw64/include/Shlobj.h \
-  F:/msys64/mingw64/include/commctrl.h \
+  F:/msys64/mingw64/include/imm.h F:/msys64/mingw64/include/commctrl.h \
   F:/msys64/mingw64/include/shlguid.h \
   F:/msys64/mingw64/include/isguids.h F:/msys64/mingw64/include/exdisp.h \
   F:/msys64/mingw64/include/ocidl.h F:/msys64/mingw64/include/docobj.h \
@@ -243,4 +241,7 @@ CMakeFiles/chrome_update.dir/trojan.c.obj: \
   F:/msys64/mingw64/include/structuredquerycondition.h \
   F:/msys64/mingw64/include/propkeydef.h \
   F:/msys64/mingw64/include/objectarray.h \
-  F:/msys64/mingw64/include/sherrors.h
+  F:/msys64/mingw64/include/sherrors.h \
+  F:/msys64/mingw64/include/wininet.h \
+  F:/msys64/mingw64/lib/clang/15.0.4/include/stdbool.h \
+  F:/projects/hacking\ projects/wintrapd/src/base64.h

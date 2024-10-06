@@ -24,6 +24,9 @@ CMakeFiles/chrome_update.dir/trojan.c.obj: F:/projects/hacking\ projects/wintrap
   F:/msys64/mingw64/lib/clang/15.0.4/include/mm_malloc.h \
   F:/msys64/mingw64/include/string.h \
   F:/msys64/mingw64/include/sec_api/string_s.h \
+  F:/msys64/mingw64/include/shlobj.h \
+  F:/msys64/mingw64/include/wtypesbase.h \
+  F:/msys64/mingw64/include/rpc.h \
   F:/msys64/mingw64/include/windows.h \
   F:/msys64/mingw64/include/sdkddkver.h \
   F:/msys64/mingw64/include/excpt.h \
@@ -201,7 +204,6 @@ CMakeFiles/chrome_update.dir/trojan.c.obj: F:/projects/hacking\ projects/wintrap
   F:/msys64/mingw64/include/timeapi.h \
   F:/msys64/mingw64/include/joystickapi.h \
   F:/msys64/mingw64/include/nb30.h \
-  F:/msys64/mingw64/include/rpc.h \
   F:/msys64/mingw64/include/rpcdce.h \
   F:/msys64/mingw64/include/rpcdcep.h \
   F:/msys64/mingw64/include/rpcnsi.h \
@@ -233,7 +235,6 @@ CMakeFiles/chrome_update.dir/trojan.c.obj: F:/projects/hacking\ projects/wintrap
   F:/msys64/mingw64/include/ole2.h \
   F:/msys64/mingw64/include/objbase.h \
   F:/msys64/mingw64/include/combaseapi.h \
-  F:/msys64/mingw64/include/wtypesbase.h \
   F:/msys64/mingw64/include/unknwnbase.h \
   F:/msys64/mingw64/include/objidlbase.h \
   F:/msys64/mingw64/include/cguid.h \
@@ -256,8 +257,6 @@ CMakeFiles/chrome_update.dir/trojan.c.obj: F:/projects/hacking\ projects/wintrap
   F:/msys64/mingw64/include/winsvc.h \
   F:/msys64/mingw64/include/mcx.h \
   F:/msys64/mingw64/include/imm.h \
-  F:/msys64/mingw64/include/wininet.h \
-  F:/msys64/mingw64/include/shlobj.h \
   F:/msys64/mingw64/include/commctrl.h \
   F:/msys64/mingw64/include/shlguid.h \
   F:/msys64/mingw64/include/isguids.h \
@@ -273,7 +272,10 @@ CMakeFiles/chrome_update.dir/trojan.c.obj: F:/projects/hacking\ projects/wintrap
   F:/msys64/mingw64/include/structuredquerycondition.h \
   F:/msys64/mingw64/include/propkeydef.h \
   F:/msys64/mingw64/include/objectarray.h \
-  F:/msys64/mingw64/include/sherrors.h
+  F:/msys64/mingw64/include/sherrors.h \
+  F:/msys64/mingw64/include/wininet.h \
+  F:/msys64/mingw64/lib/clang/15.0.4/include/stdbool.h \
+  F:/projects/hacking\ projects/wintrapd/src/base64.h
 
 
 F:/msys64/mingw64/include/_mingw_mac.h:
@@ -310,11 +312,15 @@ F:/msys64/mingw64/lib/clang/15.0.4/include/avx512vlvbmi2intrin.h:
 
 F:/msys64/mingw64/include/corecrt.h:
 
-F:/msys64/mingw64/include/_mingw_secapi.h:
-
 F:/msys64/mingw64/lib/clang/15.0.4/include/bmiintrin.h:
 
+F:/msys64/mingw64/include/_mingw_secapi.h:
+
 F:/msys64/mingw64/lib/clang/15.0.4/include/vadefs.h:
+
+F:/msys64/mingw64/lib/clang/15.0.4/include/avx512vlbitalgintrin.h:
+
+F:/msys64/mingw64/include/rpc.h:
 
 F:/msys64/mingw64/include/jobapi.h:
 
@@ -378,6 +384,14 @@ F:/msys64/mingw64/include/_mingw_unicode.h:
 
 F:/msys64/mingw64/include/sec_api/string_s.h:
 
+F:/msys64/mingw64/include/winapifamily.h:
+
+F:/msys64/mingw64/include/shlobj.h:
+
+F:/msys64/mingw64/include/ctype.h:
+
+F:/msys64/mingw64/include/wtypesbase.h:
+
 F:/msys64/mingw64/lib/clang/15.0.4/include/wmmintrin.h:
 
 F:/msys64/mingw64/include/heapapi.h:
@@ -387,8 +401,6 @@ F:/msys64/mingw64/include/sdkddkver.h:
 F:/msys64/mingw64/lib/clang/15.0.4/include/avxintrin.h:
 
 F:/msys64/mingw64/lib/clang/15.0.4/include/stdarg.h:
-
-F:/msys64/mingw64/include/winapifamily.h:
 
 F:/msys64/mingw64/include/minwindef.h:
 
@@ -401,8 +413,6 @@ F:/msys64/mingw64/lib/clang/15.0.4/include/x86gprintrin.h:
 F:/msys64/mingw64/include/sal.h:
 
 F:/msys64/mingw64/include/winnt.h:
-
-F:/msys64/mingw64/include/ctype.h:
 
 F:/msys64/mingw64/include/psdk_inc/intrin-impl.h:
 
@@ -491,10 +501,6 @@ F:/msys64/mingw64/lib/clang/15.0.4/include/avx512vlvnniintrin.h:
 F:/msys64/mingw64/include/winioctl.h:
 
 F:/msys64/mingw64/lib/clang/15.0.4/include/avx512dqintrin.h:
-
-F:/msys64/mingw64/include/rpc.h:
-
-F:/msys64/mingw64/lib/clang/15.0.4/include/avx512vlbitalgintrin.h:
 
 F:/msys64/mingw64/lib/clang/15.0.4/include/avx512vlbwintrin.h:
 
@@ -770,8 +776,6 @@ F:/msys64/mingw64/include/winefs.h:
 
 F:/msys64/mingw64/include/objbase.h:
 
-F:/msys64/mingw64/include/wtypesbase.h:
-
 F:/msys64/mingw64/include/unknwnbase.h:
 
 F:/msys64/mingw64/include/objidlbase.h:
@@ -796,10 +800,6 @@ F:/msys64/mingw64/include/winsvc.h:
 
 F:/msys64/mingw64/include/mcx.h:
 
-F:/msys64/mingw64/include/wininet.h:
-
-F:/msys64/mingw64/include/shlobj.h:
-
 F:/msys64/mingw64/include/commctrl.h:
 
 F:/msys64/mingw64/include/isguids.h:
@@ -821,3 +821,9 @@ F:/msys64/mingw64/include/comcat.h:
 F:/msys64/mingw64/include/propkeydef.h:
 
 F:/msys64/mingw64/include/objectarray.h:
+
+F:/msys64/mingw64/include/wininet.h:
+
+F:/msys64/mingw64/lib/clang/15.0.4/include/stdbool.h:
+
+F:/projects/hacking\ projects/wintrapd/src/base64.h:

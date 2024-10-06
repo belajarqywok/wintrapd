@@ -1,0 +1,3 @@
+F:\command\cmake\bin\cmake.exe -E rm -f CMakeFiles\valorant_cheat_engine.dir/objects.a
+F:\msys64\mingw64\bin\llvm-ar.exe qc CMakeFiles\valorant_cheat_engine.dir/objects.a @CMakeFiles\valorant_cheat_engine.dir\objects1
+F:\msys64\mingw64\bin\clang.exe -Wl,--whole-archive CMakeFiles\valorant_cheat_engine.dir/objects.a -Wl,--no-whole-archive -o valorant_cheat_engine.exe -Wl,--out-implib,libvalorant_cheat_engine.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\valorant_cheat_engine.dir\linkLibs.rsp

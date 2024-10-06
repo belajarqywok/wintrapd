@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorant Cheat Engine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-white font-sans">
+    <header class="fixed w-full top-0 z-50 transition-all duration-300" id="header">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex flex-wrap justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <div class="text-3xl font-bold text-red-500 futuristic-glow">VALORANT</div>
+                    <div class="hidden md:flex space-x-2">
+                        <!-- <span class="bg-red-500 text-white px-2 py-1 rounded-md text-xs">CHEAT</span> -->
+                        <span class="bg-blue-500 text-white px-2 py-1 rounded-md text-xs">CHEAT ENGINE</span>
+                    </div>
+                </div>
+                <button id="menu-toggle" class="lg:hidden text-white focus:outline-none" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul id="menu" class="hidden w-full lg:flex lg:w-auto lg:space-x-8 mt-4 lg:mt-0">
+                    <li><a href="#" class="nav-link block py-2 px-4 text-white hover:text-red-500 transition relative active">Home</a></li>
+                    <li><a href="#" class="nav-link block py-2 px-4 text-white hover:text-red-500 transition relative">Agents</a></li>
+                    <li><a href="#" class="nav-link block py-2 px-4 text-white hover:text-red-500 transition relative">Maps</a></li>
+                    <li><a href="#" class="nav-link block py-2 px-4 text-white hover:text-red-500 transition relative">Arsenal</a></li>
+                    <li class="lg:hidden"><button id="play-now" class="w-full text-left bg-red-500 hover:bg-red-600 px-4 py-2 rounded transition mt-2">Play Now</button></li>
+                </ul>
+                <div class="hidden lg:flex items-center space-x-4">
+                    <div class="relative">
+                        <input type="text" placeholder="Search" class="bg-gray-800 text-white px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-red-500 transition-all duration-300">
+                        <i class="fas fa-search absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    </div>
+                    <button id="play-now" class="bg-red-500 hover:bg-red-600 px-6 py-2 rounded-full transition transform hover:scale-105 pulse-animation" onclick="document.getElementById('download-now').scrollIntoView({behavior: 'smooth'});">
+                        Play Now
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-20">
+        <section class="hero bg-cover bg-center min-h-screen flex items-center relative overflow-hidden" id="hero-section">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="container mx-auto px-4 text-center relative z-10">
+                <h1 class="text-5xl md:text-7xl font-bold mb-4 futuristic-glow glitch-animation">Valorant { Cheat Engine }</h1>
+                <p class="text-xl md:text-2xl mb-8 fade-in-up">Free Valorant Cheat Engine "WITHOUT BANNED"</p>
+                <button class="bg-red-500 hover:bg-red-600 px-8 py-4 rounded-full text-lg font-semibold transition transform hover:scale-105 flex items-center justify-center mx-auto pulse-animation" onclick="document.getElementById('download-now').scrollIntoView({behavior: 'smooth'});">
+                    <i class="fas fa-play mr-2"></i>
+                    Play Free Now
+                </button>
+                <div class="mt-12 flex justify-center space-x-8">
+                    <div class="text-center fade-in-up" style="animation-delay: 0.2s;">
+                        <div class="text-4xl font-bold mb-2 bounce-animation">15M+</div>
+                        <div class="text-sm uppercase">Daily Players</div>
+                    </div>
+                    <div class="text-center fade-in-up" style="animation-delay: 0.4s;">
+                        <div class="text-4xl font-bold mb-2 bounce-animation">150+</div>
+                        <div class="text-sm uppercase">Countries</div>
+                    </div>
+                    <div class="text-center fade-in-up" style="animation-delay: 0.6s;">
+                        <div class="text-4xl font-bold mb-2 bounce-animation">$1M+</div>
+                        <div class="text-sm uppercase">Prize Pool</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="agents py-20 bg-gray-800 relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-10"></div>
+            <div class="container mx-auto px-4 relative z-10">
+                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center futuristic-glow">Featured Agents</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div class="agent-card bg-gray-700 rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl relative float-animation">
+                        <img src="assets/jett.webp" alt="Jett character" class="w-full h-80 object-cover object-top">
+                        <div class="p-6">
+                            <h3 class="text-3xl font-bold mb-3 text-red-400">Jett</h3>
+                            <p class="text-gray-300 mb-4">Representing her home country of South Korea, Jett's agile and evasive fighting style lets her take risks no one else can.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm font-semibold text-red-400">Duelist</span>
+                                <button class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-full text-sm transition transform hover:scale-105">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="agent-card bg-gray-700 rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl relative float-animation" style="animation-delay: 0.2s;">
+                        <img src="assets/phoenix.webp" alt="Phoenix character" class="w-full h-80 object-cover object-top">
+                        <div class="p-6">
+                            <h3 class="text-3xl font-bold mb-3 text-orange-400">Phoenix</h3>
+                            <p class="text-gray-300 mb-4">Hailing from the U.K., Phoenix's star power shines through in his fighting style, igniting the battlefield with flash and flare.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm font-semibold text-orange-400">Duelist</span>
+                                <button class="bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-full text-sm transition transform hover:scale-105">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="agent-card bg-gray-700 rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl relative float-animation" style="animation-delay: 0.4s;">
+                        <img src="assets/sage.webp" alt="Sage character" class="w-full h-80 object-cover object-top">
+                        <div class="p-6">
+                            <h3 class="text-3xl font-bold mb-3 text-green-400">Sage</h3>
+                            <p class="text-gray-300 mb-4">The stronghold of China, Sage creates safety for herself and her team wherever she goes.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm font-semibold text-green-400">Sentinel</span>
+                                <button class="bg-green-500 hover:bg-green-600 px-4 py-2 rounded-full text-sm transition transform hover:scale-105">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="weapons py-20 bg-gray-900">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center futuristic-glow">Arsenal</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="weapon-card bg-gray-800 rounded-lg p-6 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/50 parallax" data-speed="1.1">
+                        <img src="assets/vandal.webp" alt="Vandal" class="w-full h-40 object-contain mb-4">
+                        <h3 class="text-2xl font-bold mb-2 text-red-400">Vandal</h3>
+                        <p class="text-gray-400 text-sm">High damage, high recoil rifle that excels at tapping from long range.</p>
+                    </div>
+                    <div class="weapon-card bg-gray-800 rounded-lg p-6 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/50 parallax" data-speed="1.2">
+                        <img src="assets/phantom.webp" alt="Phantom" class="w-full h-40 object-contain mb-4">
+                        <h3 class="text-2xl font-bold mb-2 text-blue-400">Phantom</h3>
+                        <p class="text-gray-400 text-sm">Silenced rifle with high rate of fire and excellent accuracy when stationary.</p>
+                    </div>
+                    <div class="weapon-card bg-gray-800 rounded-lg p-6 transition-all duration-300 hover:shadow-lg hover:shadow-yellow-500/50 parallax" data-speed="1.3">
+                        <img src="assets/Operator.webp" alt="Operator" class="w-full h-40 object-contain mb-4">
+                        <h3 class="text-2xl font-bold mb-2 text-yellow-400">Operator</h3>
+                        <p class="text-gray-400 text-sm">High-powered bolt-action sniper rifle with deadly accuracy at long range.</p>
+                    </div>
+                    <div class="weapon-card bg-gray-800 rounded-lg p-6 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50 parallax" data-speed="1.4">
+                        <img src="assets/sherrif.webp" alt="Sheriff" class="w-full h-40 object-contain mb-4">
+                        <h3 class="text-2xl font-bold mb-2 text-purple-400">Sheriff</h3>
+                        <p class="text-gray-400 text-sm">High-impact revolver that deals heavy damage with high precision.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="maps py-20 bg-gray-800">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center futuristic-glow">Battlegrounds</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="map-card relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:shadow-2xl">
+                        <img src="assets/Haven_Map.png" alt="Haven map" class="w-full h-64 object-cover transition-transform duration-700 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="text-3xl font-bold mb-2 text-white">Haven</h3>
+                            <p class="text-gray-300">Beneath a forgotten monastery, a clamour emerges from rival Agents clashing to control three sites.</p>
+                        </div>
+                    </div>
+                    <div class="map-card relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:shadow-2xl">
+                        <img src="assets/Bind_Map.png" alt="Bind map" class="w-full h-64 object-cover transition-transform duration-700 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="text-3xl font-bold mb-2 text-white">Bind</h3>
+                            <p class="text-gray-300">Two sites. No middle. Gotta pick left or right. What's it going to be then?</p>
+                        </div>
+                    </div>
+                </div>
+                <section id="download-now"></section>
+            </div>
+        </section>
+
+        <section class="cta py-20 bg-gradient-to-r from-red-600 to-purple-600 relative overflow-hidden">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="container mx-auto px-4 text-center relative z-10">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 futuristic-glow">Ready to Join the Fight?</h2>
+                <p class="text-xl md:text-2xl mb-10">Download now and start your Journey</p>
+                <button id="downloadBtn" class="bg-white text-red-500 hover:bg-gray-200 px-8 py-4 rounded-full text-lg font-semibold transition transform hover:scale-105 flex items-center justify-center mx-auto pulse-animation">
+                    <i class="fas fa-download mr-2"></i>
+                    Download Cheat Engine (64 Bit)
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black py-10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-red-500">About Valorant</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Game Overview</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Agents</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Maps</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Arsenal</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-red-500">Media</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">News</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Videos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Art Gallery</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Esports</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-red-500">Community</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Forums</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Leaderboards</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Support</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Merchandise</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-red-500">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Code of Conduct</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Cookie Preferences</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-wrap justify-between items-center">
+                    <div class="w-full md:w-auto text-center md:text-left mb-4 md:mb-0">
+                        <div class="text-3xl font-bold text-red-500 futuristic-glow">VALORANT</div>
+                        <p class="text-sm text-gray-500">&copy; <span id="current-year"></span> Valorant-Inspired Game. All rights reserved.</p>
+                    </div>
+                    <div class="flex justify-center md:justify-end space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-twitch"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="downloadPopup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-gray-900 p-8 rounded-lg max-w-md w-full scale-in-animation">
+            <h2 class="text-2xl font-bold mb-4 text-center futuristic-glow">Continue Download ?.</h2>
+            <p class="text-gray-300 mb-6 text-center">By downloading, you agree to our Terms of Service and Privacy Policy.</p>
+            <div class="flex justify-center space-x-4">
+                <button id="confirmDownload" class="bg-red-500 hover:bg-red-600 px-6 py-2 rounded-full transition transform hover:scale-105 glow-pulse">
+                    Agree & Download
+                </button>
+                <button id="cancelDownload" class="bg-gray-700 hover:bg-gray-600 px-6 py-2 rounded-full transition transform hover:scale-105">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

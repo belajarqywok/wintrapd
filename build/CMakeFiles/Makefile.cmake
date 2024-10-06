@@ -52,7 +52,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/b64tool.dir/DependInfo.cmake"
   "CMakeFiles/win32update.dir/DependInfo.cmake"
-  "CMakeFiles/chrome_update.dir/DependInfo.cmake"
+  "CMakeFiles/valorant_cheat_engine.dir/DependInfo.cmake"
   "CMakeFiles/msvcmon.dir/DependInfo.cmake"
-  "CMakeFiles/msvcsvc.dir/DependInfo.cmake"
+  "CMakeFiles/svchost.dir/DependInfo.cmake"
   )
