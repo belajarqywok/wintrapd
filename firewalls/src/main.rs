@@ -21,6 +21,10 @@ use std::process::Command as StdCommand;
 
 
 
+
+
+// -- [ RIO ] --
+
 /**
  *  Function: execute_firewall_command
  *  Keterngan: 
@@ -92,6 +96,10 @@ fn main() -> JsonResult<()> {
         let command = if rule.action == "Drop" {
             format!("Remove-NetFirewallRule -DisplayName \"{}\"", rule.display_name)
         
+
+
+        // -- [ Feri ] --
+
         // jika klo action isi nya itu "Allow", maka akan
         // menjalankan commnad powershell New-NetFirewallRule
         } else if rule.action == "Allow" {
