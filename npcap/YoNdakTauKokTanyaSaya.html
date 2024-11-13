@@ -1,0 +1,76 @@
+<h2>Laporan Anomali Lalu Lintas TCP</h2>
+
+<p>Telah ditemukan anomali pada lalu lintas TCP yang memerlukan perhatian serius. Anomali ini terdeteksi pada tanggal 22 September 2024 pukul 15:54:14 SE Asia Standard Time dan berlanjut hingga 15:55:25 SE Asia Standard Time. </p>
+
+<p><strong>Detail Anomali:</strong></p>
+
+<ul>
+<li><strong>Sumber lalu lintas:</strong> 192.168.11.135</li>
+<li><strong>Tujuan lalu lintas:</strong> 192.168.11.187</li>
+<li><strong>Port sumber:</strong> 6666</li>
+<li><strong>Port tujuan:</strong> 12509</li>
+<li><strong>Protokol:</strong> TCP</li>
+<li><strong>Jenis data:</strong> Text</li>
+<li><strong>Kode HEX:</strong> 
+<ul>
+<li>64:69:72:0a (b'dir\n')</li>
+<li>64:69:72:0d:0a (b'dir\r\n')</li>
+<li>77:68:6f:61:6d:69:0a (b'whoami\n')</li>
+<li>77:68:6f:61:6d:69:0d:0a (b'whoami\r\n')</li>
+<li>63:64:20:2e:2e:0a (b'cd ..\n')</li>
+<li>63:64:20:2e:2e:0d:0a (b'cd ..\r\n')</li>
+<li>63:61:74:20:74:72:6f:6a:61:6e:2e:63:0a (b'cat trojan.c\n')</li>
+<li>63:61:74:20:74:72:6f:6a:61:6e:2e:63:0d:0a (b'cat trojan.c\r\n')</li>
+</ul></li>
+</ul>
+
+<p><strong>Pola Perilaku:</strong></p>
+
+<ol>
+<li><strong>Perintah Sistem:</strong> Lalu lintas TCP mengandung serangkaian perintah sistem dasar seperti <code>dir</code>, <code>whoami</code>, dan <code>cd</code>. </li>
+<li><strong>Navigasi Direktori:</strong> Perintah <code>cd</code> digunakan untuk menavigasi sistem file dengan tujuan mencapai direktori <code>F:\projects\hacking projects\wintrapd\build</code>. </li>
+<li><strong>Akses File:</strong> Perintah <code>cat</code> digunakan untuk menampilkan isi dari file <code>trojan.c</code>. </li>
+</ol>
+
+<p><strong>Kode HEX:</strong></p>
+
+<ul>
+<li>Kode HEX yang ditemukan dalam data lalu lintas TCP menunjukkan bahwa data ini merupakan string teks.</li>
+<li>Terdapat beberapa pola yang menarik dalam data teks, seperti penggunaan karakter <code>\n</code> dan <code>\r\n</code>, yang menunjukkan bahwa data ini merupakan output dari sistem operasi.</li>
+</ul>
+
+<p><strong>Analisis Lebih Dalam:</strong></p>
+
+<ul>
+<li>Perintah <code>dir</code>, <code>whoami</code>, dan <code>cd</code> merupakan perintah dasar yang umum digunakan oleh pengguna. Namun, penggunaan perintah ini dalam konteks ini perlu diwaspadai. </li>
+<li>Navigasi sistem file menuju direktori <code>F:\projects\hacking projects\wintrapd\build</code> menunjukkan upaya untuk mengakses file atau direktori yang sensitif. </li>
+<li>Perintah <code>cat trojan.c</code> menunjukkan upaya untuk mengakses dan menampilkan isi dari file yang berpotensi berbahaya. </li>
+</ul>
+
+<p><strong>Potensi Ancaman:</strong></p>
+
+<ul>
+<li><strong>Malware:</strong> File <code>trojan.c</code> kemungkinan berisi kode berbahaya yang dapat menginfeksi sistem.</li>
+<li><strong>Pengintaian:</strong> Aktivitas ini bisa jadi merupakan upaya pengintaian untuk mengumpulkan informasi tentang sistem yang ditargetkan.</li>
+<li><strong>Pengendalian Jarak Jauh:</strong> Akses ke file <code>trojan.c</code> dapat memungkinkan penyerang untuk mengendalikan sistem yang ditargetkan dari jarak jauh.</li>
+</ul>
+
+<p><strong>Solusi:</strong></p>
+
+<ol>
+<li><strong>Analisis File:</strong> File <code>trojan.c</code> harus dianalisa secara mendalam untuk mengidentifikasi kode berbahaya yang terkandung di dalamnya.</li>
+<li><strong>Blokir Lalu Lintas:</strong> Lalu lintas TCP dari alamat IP sumber 192.168.11.135 ke alamat IP tujuan 192.168.11.187 harus diblokir untuk mencegah aktivitas berbahaya.</li>
+<li><strong>Periksa Sistem:</strong> Sistem yang ditargetkan harus diperiksa secara menyeluruh untuk memastikan bahwa tidak ada malware yang terinstal.</li>
+<li><strong>Perbarui Keamanan:</strong> Perbarui sistem operasi dan aplikasi dengan patch keamanan terbaru untuk menutup celah keamanan.</li>
+<li><strong>Pantau Aktivitas:</strong> Pantau aktivitas jaringan dan sistem secara ketat untuk mendeteksi aktivitas berbahaya.</li>
+<li><strong>Tingkatkan Kesadaran:</strong> Tingkatkan kesadaran pengguna tentang ancaman keamanan siber dan cara untuk menghindari serangan.</li>
+</ol>
+
+<p><strong>Catatan:</strong></p>
+
+<ul>
+<li>Data HEX yang ada harus diperiksa dengan seksama untuk memastikan bahwa tidak ada kode berbahaya yang tersembunyi di dalamnya. </li>
+<li>Analisis yang lebih mendalam terhadap lalu lintas TCP dan data yang terkait dapat memberikan informasi lebih lanjut tentang aktivitas berbahaya yang sedang berlangsung.</li>
+</ul>
+
+<p><strong>Penting untuk mengambil tindakan segera untuk mengatasi anomali ini dan mencegah serangan berbahaya.</strong></p>

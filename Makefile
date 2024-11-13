@@ -48,3 +48,19 @@ msfrun:
 .PHONY: clean
 clean:
 	rm -rf $(OUTPUT_DIR) $(BUILD_DIR)
+
+.PHONY: get_service
+get_service:
+	Get-Service -Name "svchost"
+
+.PHONY: stop_service
+stop_service:
+	Stop-Service -Name "svchost" -Force
+
+.PHONY: delete_service
+delete_service:
+	sc delete "svchost"
+
+.PHONY: search_service
+search_services:
+	Get-Process svchost | Select-Object Id, ProcessName, Path

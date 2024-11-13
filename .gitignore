@@ -1,2 +1,13 @@
+# firewall
 /firewalls/target
-/npcap
+
+# npcap
+/npcap/pyvenv.cfg
+/npcap/activate.bat
+/npcap/credentials.json
+
+/npcap/etc/
+/npcap/Lib/
+/npcap/share/
+/npcap/Scripts/
+/npcap/Include/

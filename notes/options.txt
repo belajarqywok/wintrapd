@@ -1,0 +1,16 @@
+Maximum Segment Size (MSS): Opsi ini digunakan untuk mengatur ukuran
+                            segmen maksimum yang dapat diterima oleh penerima.
+                            Biasanya digunakan untuk menghindari fragmentasi pada
+                            jaringan dengan MTU (Maximum Transmission Unit) yang lebih kecil.
+
+Window Scale Option
+Ini digunakan untuk mengatasi masalah ukuran window di jaringan yang memiliki bandwidth tinggi dan delay tinggi (BDP atau Bandwidth-Delay Product). Dengan window scaling, TCP dapat mengelola jendela aliran yang lebih besar daripada yang diperbolehkan oleh header standar.
+
+Timestamp
+Digunakan untuk pengukuran round-trip time (RTT) dan untuk mengatur urutan segmen dalam koneksi TCP. Ini juga membantu dalam pengelolaan pengiriman ulang (retransmission).
+
+No-Operation (NOP)
+Opsi ini digunakan untuk mengisi ruang atau untuk mengatur batas antara opsi lainnya. Biasanya digunakan untuk menyelaraskan opsi-opsi lainnya.
+
+Selective Acknowledgment (SACK)
+Digunakan untuk memberi tahu penerima bahwa data tertentu telah diterima meskipun ada segmen yang hilang. Ini memungkinkan pengirim untuk mengirimkan ulang hanya bagian yang hilang, bukan seluruh segmen.

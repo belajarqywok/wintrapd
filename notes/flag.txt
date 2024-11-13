@@ -1,0 +1,22 @@
+URG (Urgent): Flag ini menandakan bahwa data dalam segment tersebut penting
+              dan perlu diproses segera. Jika flag ini aktif, berarti data tersebut perlu
+              ditangani dengan prioritas tinggi.
+
+ACK (Acknowledgment): Digunakan untuk mengonfirmasi penerimaan segmen sebelumnya.
+                      Jika flag ini aktif, maka nomor urut dalam header TCP akan berisi
+                      nomor urut data yang terakhir diterima dengan benar.
+
+PSH (Push): Flag ini menunjukkan bahwa data harus segera diproses oleh penerima,
+            tanpa menunggu lebih banyak data. Artinya, pengirim meminta penerima untuk
+            langsung memproses data tanpa buffer lebih lama.
+
+FIN (Finish): Digunakan untuk mengindikasikan bahwa pengirim telah selesai mengirimkan
+              data dan ingin menutup koneksi. Biasanya, proses ini terjadi dalam sesi TCP
+              untuk menyelesaikan komunikasi yang sedang berlangsung.
+
+RST (Reset): Flag ini digunakan untuk mereset koneksi. Ini menandakan bahwa ada masalah atau
+             error dalam koneksi, dan koneksi perlu dihentikan atau dipulihkan ulang.
+
+SYN (Synchronize): Digunakan untuk menginisiasi koneksi baru. Saat membuat koneksi TCP,
+                   pengirim dan penerima akan saling bertukar segmen yang memiliki flag SYN
+                   untuk memulai komunikasi.
